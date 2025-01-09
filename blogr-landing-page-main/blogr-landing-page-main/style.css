@@ -113,9 +113,9 @@ nav{
     left: 0;
     width: 100%;
     height: calc(100vh - 3.5rem);
-    overflow: auto;
+    /* overflow: auto;
     pointer-events: none;
-    opacity: 0;
+    opacity: 0; */
     transition: top .4s, opacity .4s;
   }
 
@@ -154,4 +154,115 @@ nav{
 .show-icon .nav-close{
   opacity: 1;
   transform: rotate(90ged);
+}
+
+/* dropdown */
+.dropdown-item{
+  cursor: pointer;
+}
+
+.dropdown-arrow{
+  font-size: 1.25rem;
+  font-weight: initial;
+  transition: transform .4s;
+}
+
+.dropdown-link{
+  padding: 1.25rem 1.25rem 1.25rem 2.5rem;
+  color: white;
+  background-color: var(--black-color-light);
+  display: flex;
+  align-items: center;
+  column-gap: .5rem;
+  transition: background-color .3s;
+}
+
+.dropdown-link a{
+  color: white;
+  cursor: pointer;
+}
+
+.nav-menu::-webkit-scrollbar{
+  width: 0;
+}
+
+.dropdown-link:hover{
+  background-color: var(--black-color);
+}
+
+.dropdown-menu{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .4s ease-out;
+}
+
+.dropdown-item:hover .dropdown-menu{
+  max-height: 1000px;
+  transition: max-height .4s ease-in;
+}
+
+.dropdown-item:hover .dropdown-arrow{
+  transform: rotate(180deg);
+}
+
+/* break points */
+
+/* large device */
+@media screen and (min-width: 1118px){
+  .container{
+    margin-inline: auto;
+  }
+
+  .nav{
+    height: calc(var(--header-height) + 2rem);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  header a {
+    color: white;
+  }
+}
+
+/* small device */
+@media screen and (max-width:340px){
+  .container{
+    margin-inline: 1rem;
+  }
+
+  .nav-link{
+    padding-inline: 1rem;
+  }
+  .nav-toggle{
+    display: none;
+  }
+
+  .nav-list{
+    height: 100%;
+    display: flex;
+    column-gap: 3rem;
+  }
+  .nav-link{
+    height: 100%;
+    padding: 0;
+    justify-content: initial;
+    column-gap: .25rem;
+  }
+   .nav-link:hover{
+    background-color: transparent;
+   }
+
+   .dropdown-item{
+    position: relative;
+   }
+   .dropdown-menu{
+    max-height: initial;
+    overflow: initial;
+    position: absolute;
+    left: 0;
+    top: 6rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s, top .3s;
+   }
 }
