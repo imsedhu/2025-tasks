@@ -17,64 +17,84 @@ ul{
   list-style: none;
 }
 
-nav button {
-  border: none;
+.container{
+  max-width: 1120px;
+  margin-inline: 1.5rem;
 }
 
-/* nav  */
 header{
   width: 100%;
-  padding: 20px 40px ;
-  position: fixed;
   top: 0;
   left: 0;
-  background-color: lightblue;
+  background-color: rgb(201, 249, 233);
   z-index: 100;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.5)                                                                ;
 }
 
 nav{
-  padding: 0px 20px;
+  height: 3.5rem;
+  padding-bottom: .5rem;
+}
+
+.nav-data{
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
-.nav-menu ul{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.nav-data a img{
+  width: 120px;
 }
 
-.nav-menu ul li {
-  padding-right: 10px;
-  margin-right: 20px;
+.nav-toggle{
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+
+.nav-toggle .nav-humbergar,
+.nav-toggle .nav-close{
+  position: absolute;
+  width: max-content;
+  height: max-content;
+  inset: 0;
+  margin: auto;
+  font-size: 1.2rem;
   cursor: pointer;
+  transition: opacity .4s, transform .3s;
+}
+.nav-close{
+  opacity: 0;
 }
 
-.nav-data a img {
-  width: 150px;
-  cursor: pointer;
+@media screen and (max-width:1118px){
+  .nav-menu{
+    position: absolute;
+    left: 0;
+    top: 2.5rem;
+    background-color: rgb(201, 249, 233);
+    transition: top .3s, opacity .4s;
+    overflow: auto;
+    height: calc(100vh - 3.5rem);
+    width: 100%;
+  }
+
+  .nav-list{
+    background-color: aqua;
+  }
 }
 
+.nav-link,
 .nav-items{
+  cursor: pointer;
+  background-color: rgb(201, 249, 233);
+  padding: 1.25rem 1.5rem ;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  transition: background-color .3s;
 }
 
-.nav-items p {
-  margin-left: 20px;
-  padding: 10px 20px;
-  cursor: pointer;
-}
-
-.demo:hover{
-    color: orangered;
-}
-
-.login{
-  color: orangered;
-  border: 1px solid orangered;
-  width: 50px;
-  height: 30px;
+.nav-link:hover {
+  background-color: rgb(16, 117, 117);
 }
