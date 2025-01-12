@@ -1,0 +1,57 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+ul{
+  list-style: none;
+}
+
+header{
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+}
+nav{
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 3rem;
+}
+.nav-logo img{
+  height: 100%;
+  width: 130px;
+}
+.nav-list,
+.nav-items ul{
+  display: flex;
+  align-items: center;
+  column-gap: 2rem;
+}
+.dropdown-btn{
+  position: relative;
+}
+.drop-menu{
+  position: absolute;
+  background-color: white;
+  width: 100px;
+  padding: 10px;
+  display: none;
+  top: 3.6rem;
+  left: 0;
+  transition: all .4s;
+}
+.nav-drop-link:hover .drop-menu{
+  display: block;
+}
