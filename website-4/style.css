@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  min-height: 100vh;
+  background-color: darkgrey;
+}
+header {
+  position: absolute;
+  width: 100%;
+  min-height: 66px;
+  background-color: #43a5f6;
+  padding: 0 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+header .logo {
+  color: white;
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+header ul {
+  position: relative;
+}
+header ul li {
+  position: relative;
+  float: left;
+}
+header ul li a {
+  color: white;
+  font-size: 1.1rem;
+  padding: 20px 25px;
+  display: flex;
+  justify-content: space-between;
+}
+header ul li a:hover {
+  background-color: blueviolet;
+}
+header ul li ul {
+  position: absolute;
+  left: 0;
+  width: 200px;
+  background-color: #445964;
+  display: none;
+}
+header ul li:hover > ul {
+  display: block;
+}
+header ul li:hover a b {
+  transform: rotate(180deg);
+}
+header ul li ul li {
+  position: relative;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+header ul li ul li ul {
+  top: 0;
+  left: 200px;
+}
+/* mobile responsive */
+@media screen and (max-width: 1000px) {
+  header{
+    padding: 10px 20px;
+  }
+  header nav{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    background-color: #445964;
+    top: 66px;
+    display: none;
+  }
+  header.active nav{
+    display: initial;
+  }
+  header nav ul li{
+    width: 100%;
+  }
+  header nav ul li ul{
+    position: relative;
+    width: 100%;
+    left: 0;
+  }
+  header ul li ul li ul{
+    top: 0;
+    left: 0;
+  }  
+  header nav ul li:hover ul li{
+    background-color: #445964;
+  }
+  .menu-toggle{
+    position: relative;
+    width: 40px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu-toggle::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    transform: translateY(-12px);
+    box-shadow: 0 12px #fff;
+  }
+  .menu-toggle::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    transform: translateY(12px);
+  }
+  .menu-toggle::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    transform: translateY(12px);
+  }
+  header.active .menu-toggle::before{
+    transform: rotate(45deg);
+    box-shadow: 0 0 #fff;
+  }
+  header.active .menu-toggle::after{
+    transform: rotate(315deg );
+  }
+}
