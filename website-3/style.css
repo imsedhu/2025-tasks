@@ -165,7 +165,8 @@ section{
   text-align: center;
   margin-bottom: 50px;
 }
-.card-section .card-container{
+.card-section .card-container,
+.api-section .api-container{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   gap: 15px;
@@ -191,3 +192,47 @@ section{
   transition: all .4s;
   transform: scale(1.03);
 }
+
+/* api card */
+.api-container{
+  padding: 40px 40px ;
+}
+
+.api-card {
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 300px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.api-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  background: #007bff;
+  color: white;
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+
+.body {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  padding: 1rem;
+}
+
+.likes {
+  padding: 1rem;
+  background: #f1f1f1;
+  text-align: right;
+}
+
