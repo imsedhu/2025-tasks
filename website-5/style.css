@@ -286,3 +286,34 @@ form textarea{
   width: 250px;
   }
 }
+
+/* rating section */
+.rating-container h1,
+.rating-container p{
+  text-align: center;
+  margin-bottom: 20px;
+}
+.rating-container h1{
+  font-size: 40px;
+}
+.rating-container p{
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+.rating1,
+.rating2{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-around;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+.rating1 div,
+.rating2 div{
+  width: 150px;
+}
+.rating1 div img,
+.rating2 div img{
+  width: 100%;
+}
