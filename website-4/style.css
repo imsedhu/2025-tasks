@@ -164,7 +164,7 @@ header ul li ul li ul {
 table {
   width: 100%;
   background-color: aquamarine;
-  padding: 20px 20px;
+  
 } 
 .table-sub-container{
   width: 100%;
@@ -174,7 +174,7 @@ table {
   margin-top: 30px;
 }
 .table-sub-container-box{
-  width: 70%;
+  
 }
 .empty-th{
   width: 20px;
@@ -190,5 +190,8 @@ table {
   column-gap: 5px;
 }
 tbody tr td{
-  padding: 10px 10px ;
+  padding: 20px 10px ;
+}
+thead tr th{
+  padding: 20px 10px;
 }
