@@ -17,6 +17,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 100;
 }
 ul {
   list-style: none;
@@ -141,4 +142,53 @@ header ul li ul li ul {
   header.active .menu-toggle::after{
     transform: rotate(315deg );
   }
+}
+
+/* table section */
+.table-section{
+  padding: 100px 40px;
+}
+.table-container h1{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.table-container .p1{
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.table-container{
+  width: 100%;
+}
+table {
+  width: 100%;
+  background-color: aquamarine;
+  padding: 20px 20px;
+} 
+.table-sub-container{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+.table-sub-container-box{
+  width: 70%;
+}
+.empty-th{
+  width: 20px;
+}
+.table-sub-container-box table thead tr .data-th{
+  width: 40%;
+}
+.col-2 ul li,
+.col-3 ul li{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 5px;
+}
+tbody tr td{
+  padding: 10px 10px ;
 }
