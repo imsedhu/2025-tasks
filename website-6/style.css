@@ -3,6 +3,10 @@
   margin: 0;
   padding: 0;
 }
+body{
+  min-height: 100vh;
+  width: 100%;
+}
 a{
   text-decoration: none;
   color: black;
@@ -175,29 +179,86 @@ section{
 
 /* footer */
 footer{
-  padding: 60px 30px;
+  padding: 60px 30px 10px 30px;
+  position: sticky;
+  top: 100%;
 }
+
 .footer-container{
   width: 100%;
   display: flex;
-  align-items: flex-start;
+  align-items: start;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.footer-container .div-box1,
-.footer-container .div-box2,
-.footer-container .div-box3,
-.footer-container .div-box4{
+.footer-container .box-1{
+  flex: 1;
+  min-width: 250px;
+}
+.footer-container .box-2{
+  flex: 2;
+  height: 100%;
+  min-width: 350px;
   display: flex;
   align-items: start;
   justify-content: space-between;
-  flex-direction: column;
-  min-width: 200px;
+  flex-wrap: wrap;
 }
-.footer-container .div-box1 .div-subbox{
-  padding: 20px 10px;
+.brand-box .brand-items{
+  padding: 20px 20px;
+}
+.box-2 .footer-links-1 .link-box-1{
+  padding: 20px 20px;
+}
+.footer-links-1 .link-box-1 ul li{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  padding: 6px 0px;
+}
+.footer-links-1 .link-box-1 p{
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+@media screen and (max-width:660px){
+  .footer-container .box-2{
+    flex-direction: column;
+    width: 100%;
+  }
 }
 
-.div-box2 .div-items{
-  padding: 20px 20px;
+.social-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+.box-items ul{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.box-items ul li{
+  padding: 20px 10px;
+}
+.box-items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.box-items i{
+  font-size: 1.6rem;
+  padding: 10px 10px;
+}
+
+/* card grid */
+.card-section{
+  padding: 30px 30px;
+}
+.card-section .card-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
+  gap: 15px;
 }
