@@ -1,0 +1,153 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+header{
+  position: fixed;
+  width: 100%;
+  padding: 0px 60px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+  background-color: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header ul{
+  position: relative;
+}
+header ul li{
+  position: relative;
+  float: left;
+}
+header ul li a{
+  padding: 20px 25px;
+  display: flex;
+  align-items: center;
+}
+header ul li a:hover{
+  background-color: chocolate;
+}
+header ul li ul{
+  position: absolute;
+  left: 0;
+  width: 150px;
+  background-color: #f2f2f2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  display: none;
+}
+header ul li:hover ul{
+  display: block;
+}
+header ul li ul li{
+  width: 100%;
+}
+header a img{
+  width: 150px;
+}
+header nav ul li a img{
+  width: 20px;
+}
+/* section-1 */
+.section-1,
+.section-2,
+.feature-section{
+  padding: 70px 70px;
+  width: 100%;
+}
+.section-1 .container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.section-1 .container .box-2 img{
+  width: 100%;
+}
+.section-1 .container .box-1{
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.section-1 .container .box-1 div{
+  padding: 10px 10px;
+}
+.box-1 div h1{
+  font-size: 50px;
+}
+.box-1 div h3{
+  color: rgb(54, 53, 53);
+}
+.box-1 div button{
+  padding: 20px 20px;
+  border: none;
+  border-radius: 10px;
+}
+.box-1 div .btn1{
+  background-color: blueviolet;
+  color: white;
+  
+}
+.box-1 div .btn2{
+  background-color: white;
+  color: blueviolet;
+  border: 1px solid blueviolet;
+}
+
+.section-2 p{
+  text-align: center;
+  font-weight: 500;
+  font-size: 20px;
+}
+.section-2 .container{
+  width: 100%;
+  padding: 0px 30px;
+}
+.section-2 .container .brand-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section-2 .container .brand-box img{
+  width: 100%;
+  padding-top: 20px;
+}
+
+.feature-section h1,p{
+  text-align: center;
+  margin-bottom: 10px;
+}
+.feature-section .container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 20px;
+}
+.feature-section .container .box-1{
+  background-color: #f2f2f2;
+  border: 1px solid gray;
+  padding: 20px 25px;
+  border-radius: 10px;
+}
+/* .feature-section .container:hover{
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+} */
+.feature-section .container .box-1 img,h3,p{
+  margin-bottom: 20px;
+}
+.feature-section .container .box-1 p{
+  text-align: start;
+}
