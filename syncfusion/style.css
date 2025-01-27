@@ -18,6 +18,7 @@ a {
 header {
   position: fixed;
   width: 100%;
+  min-height: 66px;
   padding: 0px 60px;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
   background-color: #f2f2f2;
@@ -36,7 +37,7 @@ header ul li {
 header ul li a {
   padding: 20px 25px;
   display: flex;
-  align-items: center;
+  justify-content: space-between;
 }
 header ul li a:hover {
   background-color: chocolate;
@@ -46,8 +47,6 @@ header ul li ul {
   left: 0;
   width: 150px;
   background-color: #f2f2f2;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
- /*  border-radius: 10px; */
   display: none;
 }
 header ul li:hover ul {
@@ -75,6 +74,10 @@ header nav ul li a img {
     top: 66px;
     background-color: #f2f2f2;
     width: 100%;
+    display: none;
+  }
+  header.active nav{
+    display: initial;
   }
   header nav ul li{
     width: 100%;
@@ -334,4 +337,74 @@ p {
 
 .customer-name p{
   text-align: start;
+}
+/* footer */
+.footer-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.footer-container .container1, .container2{
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.container1 .box1,
+.container2 .box2{
+  width: 200px;
+}
+.box1 h4,ul li{
+  margin-bottom: 10px;
+
+}
+.box2 h4,ul li{
+ margin-bottom: 10px;
+}
+.box2 .div1 p{
+  text-align: start;
+  margin-bottom: 0px;
+}
+.box2 .div2 p{
+text-align: start;
+margin-top: 5px;
+margin-bottom: 0px;
+}
+
+.box2 .div2{
+  margin-top: 20px;
+}
+.box2 .fax{
+  margin-top: 30px;
+}
+footer{
+  background-color: #f2f2f2;
+  position: sticky;
+  top: 100%;
+}
+.social-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.social-container .logo a img{
+  width: 150px;
+}
+.social-icon ul li{
+  float: left;
+}
+.social-icon ul li a{
+  padding: 20px 15px;
+}
+.social-icon ul li a i{
+  font-size: 25px;
+  color: gray;
+  cursor: pointer;
+}
+.social-icon ul li a i:hover{
+  color: orangered;
 }
